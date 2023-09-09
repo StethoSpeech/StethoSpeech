@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#712cf9">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <style>
+        
+    </style>
+
+</head>
+
+<body class="">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+    <div class="d-block p-3">
+        <div class="row p-5">
+            <h1 class="display-3 text-lg-center">
+                StethoSpeech: Speech Generation Through Stethoscopic Microphone Attached To The Skin
+            </h1>
+        </div>
+        <div class="row p-2">
+
+        </div>
+        <div class="row">
+            <h3 class="">Abstract: </h4>
+        </div>
+        <div class="row p-1">
+
+        </div>
+        <div class="row">
+            <p class="fs-5">
+                Developing a Non-Audible Murmur (NAM) to Speech conversion system, like StethoSpeech, offers immense potential for improving social interactions, particularly for individuals with voice disorders. This innovation enables silent communication in public settings without others hearing. Unlike traditional methods, StethoSpeech operates without specific speaker-paired data, making it practical for those with severe medical conditions. The system comprises data preparation to create ground-truth speech from NAMs and text, a self-supervised speech encoder, a sequence-to-sequence network for modality mapping, and a speech decoder for synthesis. StethoSpeech has achieved state-of-the-art results in extensive experiments, enhancing speech quality and intelligibility and preserving prosody on the CSTR NAM TIMIT Plus corpus. Moreover, it demonstrated promising outcomes when tested on 8 hours of NAM data from two healthy speakers, marking a significant stride in addressing voice disorders through cutting-edge signal processing advancements.
+            </p>
+        </div>
+
+        <div class="row p-2"></div>
+        
+        <div class="row">
+            <h3> Proposed Architecture</h4>
+        </div>
+        <div class="row p-2"></div>
+        <div class="row">
+            <figure class="figure text-center">
+                <img src="resources/namteaser_horizontal.pdf" alt="..." class="figure-img">
+                <figcaption class="figure-caption text-center">StethoSpeech is a NAM-to-Speech conversion mechanism in a zero-pair setting. It consists of data preparation, which generates ground-truth speech corresponding to NAMs, a sequence-to-sequence component that maps NAMs' self-supervised representation to speech's self-supervised representation, and a speech decoder that produces output speech corresponding to the input NAM signal.</figcaption>
+            </figure>
+        </div>
+    </div>
+
+</body>
+
+</html>
