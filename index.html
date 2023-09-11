@@ -561,6 +561,82 @@
                 </tbody>
             </table>
         </div>
+
+        <div class="row p-7"></div>
+        <div class="row">
+            <h3>Speech recognition on noisy vibrations processed by StethoSpeech vs. noisy speech in a similar environment</h3>
+        </div>
+        <div class="row d-flex table-responsive overflow-auto">
+            <table class="table table-bordered m-3">
+                <!-- <h5 class="text-center fs-4">Comparing samples for cross-lingual speech synthesis</h5> -->
+                <!-- <caption class="text-center fs-4">Comparing samples for cross-lingual speech synthesis</caption> -->
+                <thead>
+                    <tr class="flex-row">
+                        <th class="col-2 text-center">Ground-Truth Text</th>
+                        <th class="col-2 text-center">Noisy Speech</th>
+                        <th class="col-1 text-center">Predicted Text on Noisy Speech</th>
+                        <th class="col-1 text-center">Noisy Vibrations recorded using Stethoscope</th>
+                        <th class="col-2 text-center">Generated Speech using StethoSpeech</th>
+                        <th class="col-2 text-center">Predicted Text on Generated Speech</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="flex-row">
+                        <td>you have to think not.</td>
+                        <td class="text-center">
+                            <audio controls src="resources/cvit/noisyexp/noisyspeech/unity15.wav"></audio>
+                        </td>
+                        <td>you have to think about.</td>
+                        <td class="text-center">
+                            <audio controls src="resources/cvit/noisyexp/noisynam/unity_nam15.wav"></audio>
+                        </td>
+                        <td class="text-center">
+                            <audio controls src="resources/cvit/noisyexp/noisynamstethospeechoutput/unity_nam15_generated.wav"></audio>
+                        </td>
+                        <td>you have to think not.</td>
+                    </tr>
+                    <tr class="flex-row">
+                        <td>the israeli military denied the claim.</td>
+                        <td class="text-center">
+                            <audio controls src="resources/cvit/noisyexp/noisyspeech/unity_nam8.wav"></audio>
+                        </td>
+                        <td>yeah it is tiny and it looks really nice to me.</td>
+                        <td class="text-center">
+                            <audio controls src="resources/cvit/noisyexp/noisynam/unity_nam8.wav"></audio>
+                        </td>
+                        <td class="text-center">
+                            <audio controls src="resources/cvit/noisyexp/noisynamstethospeechoutput/unity_nam8_generated.wav"></audio>
+                        </td>
+                        <td>israeli military denied the claim.</td>
+                    </tr>
+                    <tr class="flex-row">
+                        <td>our legal advice is clear.</td>
+                        <td class="text-center">
+                            <audio controls src="resources/cvit/noisyexp/noisyspeech/unity11.wav"></audio>
+                        </td>
+                        <td>i love you but maybe i do not know.</td>
+                        <td class="text-center">
+                            <audio controls src="resources/cvit/noisyexp/noisynam/unity_nam11.wav"></audio>
+                        </td>
+                        <td class="text-center">
+                            <audio controls src="resources/cvit/noisyexp/noisynamstethospeechoutput/unity_nam11_generated.wav"></audio>
+                        </td>
+                        <td>our legal advice is clear.</td>
+                    </tr>
+                    <tr class="flex-row">
+                        <td>who are the democrats</td>
+                        <td class="text-center">
+                            <audio controls src="resources/cvit/noisyexp/noisyspeech/unity1.wav"></audio>
+                        </td>
+                        <td>who are the demogorgon</td>
+                        <td class="text-center">
+                            <audio controls src="resources/cvit/noisyexp/noisynam/unity_nam1.wav"></audio>
+                        </td>
+                        <td class="text-center">
+                            <audio controls src="resources/cvit/noisyexp/noisynamstethospeechoutput/unity_nam1_generated.wav"></audio>
+                        </td>
+                        <td>who are the democrats</td>
+                    </tr>
     </div>
 </body>
 
