@@ -42,6 +42,19 @@
         <div class="row p-2"></div>
         
         <div class="row">
+            <h3> StethoSpeech's teaser diagram</h4>
+        </div>
+        <div class="row p-2"></div>
+        <div class="row">
+            <figure class="figure text-center">
+                <img src="resources/teaser.png" alt="..." class="figure-img">
+                <figcaption class="figure-caption text-center">Example interaction of StethoSpeech. (A) StethoSpeech converts flesh-conducted vibrations into audible and intelligible speech. (B) Mel-spectrum of speech, where ASR predicts completely incorrect content when noisy speech is input. (C) Mel-spectrum of vibrations recorded by the stethoscope. (D) Mel-spectrum of speech converted by StethoSpeech, where ASR correctly predicts the content.</figcaption>
+            </figure>
+        </div>
+
+        <div class="row p-3"></div>
+        
+        <div class="row">
             <h3> Proposed Architecture</h4>
         </div>
         <div class="row p-2"></div>
@@ -55,7 +68,7 @@
 
     <div class="d-block p-3">
         <div class="row">
-            <h3>Comparing speech generated with baselines and StethoSpeech methods on CSTR_demo_samples NAM TIMIT Plus corpus</h3>
+            <h3>Comparing speech converted with baselines and StethoSpeech methods on CSTR NAM TIMIT Plus corpus</h3>
         </div>
 
         <div class="row d-flex table-responsive overflow-auto">
@@ -65,7 +78,7 @@
                 <thead>
                     <tr class="flex-row">
                         <th class="col-2 text-center">Text</th>
-                        <th class="col-1 text-center">NAM</th>
+                        <th class="col-1 text-center">Input NAM</th>
                         <th class="col-1 text-center">DiscoGAN</th>
                         <th class="col-1 text-center">MSpec-Net</th>
                         <th class="col-2 text-center">StethoSpeech (paired)</th>
@@ -116,7 +129,7 @@
 
         <div class="d-block p-3">
             <div class="row">
-                <h3>Generated ground-truth using paired and unpaired methods on CSTR_demo_samples NAM TIMIT Plus corpus</h3>
+                <h3>Generated ground-truth using paired and unpaired methods on CSTR NAM TIMIT Plus corpus</h3>
             </div>
     
             <div class="row d-flex table-responsive overflow-auto">
@@ -126,7 +139,7 @@
                     <thead>
                         <tr class="flex-row">
                             <th class="col-2 text-center">Text</th>
-                            <th class="col-1 text-center">NAM</th>
+                            <th class="col-1 text-center">Input NAM</th>
                             <th class="col-2 text-center">Generated Ground-Truth (paired)</th>
                             <th class="col-2 text-center">Generated Ground-Truth  (unpaired)</th>
                         </tr>
@@ -208,7 +221,7 @@
                 <thead>
                     <tr class="flex-row">
                         <th class="col-2 text-center">Text</th>
-                        <th class="col-1 text-center">NAM</th>
+                        <th class="col-1 text-center">Input NAM</th>
                         <th class="col-2 text-center">StethoSpeech (paired)</th>
                         <th class="col-2 text-center">StethoSpeech (unpaired)</th>
                     </tr>
@@ -349,7 +362,7 @@
                 <thead>
                     <tr class="flex-row">
                         <th class="col-2 text-center">Text</th>
-                        <th class="col-1 text-center">NAM</th>
+                        <th class="col-1 text-center">Input Vibrations</th>
                         <th class="col-1 text-center">Generated Ground-Truth</th>
                         <th class="col-2 text-center">Generated Speech in voice 1</th>
                         <th class="col-2 text-center">Generated Speech in voice 2</th>
@@ -461,7 +474,7 @@
                 <thead>
                     <tr class="flex-row">
                         <th class="col-2 text-center">Text</th>
-                        <th class="col-1 text-center">NAM</th>
+                        <th class="col-1 text-center">Input Vibrations</th>
                         <th class="col-1 text-center">Generated Ground-Truth</th>
                         <th class="col-2 text-center">Generated Speech in voice 1</th>
                         <th class="col-2 text-center">Generated Speech in voice 2</th>
