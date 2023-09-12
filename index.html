@@ -35,7 +35,7 @@
         </div>
         <div class="row">
             <p class="fs-5">
-                Developing a Non-Audible Murmur (NAM) to Speech conversion system, like StethoSpeech, offers immense potential for improving social interactions, particularly for individuals with voice disorders. This innovation enables silent communication in public settings without others hearing. Unlike traditional methods, StethoSpeech operates without specific speaker-paired data, making it practical for those with severe medical conditions. The system comprises data preparation to create ground-truth speech from NAMs and text, a self-supervised speech encoder, a sequence-to-sequence network for modality mapping, and a speech decoder for synthesis. StethoSpeech has achieved state-of-the-art results in extensive experiments, enhancing speech quality and intelligibility and preserving prosody on the CSTR NAM TIMIT Plus corpus. Moreover, it demonstrated promising outcomes when tested on 8 hours of NAM data from two healthy speakers, marking a significant stride in addressing voice disorders through cutting-edge signal processing advancements.
+                StethoSpeech is a Silent Speech Interface (SSI) that captures flesh-conducted vibrations behind the ear and transforms them into speech. This innovation can greatly improve social interactions for those with voice disorders and also enable discreet communication in public. Unlike traditional SSIs, StethoSpeech doesn't require specific speaker-paired data, making it practical for severe medical conditions. The system includes data preparation, a self-supervised speech encoder, a sequence-to-sequence network for modality mapping, and a speech decoder. We introduce a groundbreaking large-scale StethoText dataset, the first of its kind, for transforming speaker-specific vibrations into audible and understandable speech in a natural setting, and advancing voice disorder treatment through signal processing. Furthermore, StethoSpeech excels in experiments, enhancing speech quality, intelligibility, and prosody on the CSTR NAM TIMIT Plus corpus. Speech samples can be found at https://stethospeech.github.io/StethoSpeech/
             </p>
         </div>
 
@@ -47,15 +47,15 @@
         <div class="row p-2"></div>
         <div class="row">
             <figure class="figure text-center">
-                <img src="resources/namteaser_horizontal.png" alt="..." class="figure-img">
-                <figcaption class="figure-caption text-center">StethoSpeech is a NAM-to-Speech conversion mechanism in a zero-pair setting. It consists of data preparation, which generates ground-truth speech corresponding to NAMs, a sequence-to-sequence component that maps NAMs' self-supervised representation to speech's self-supervised representation, and a speech decoder that produces output speech corresponding to the input NAM signal.</figcaption>
+                <img src="resources/method.png" alt="..." class="figure-img">
+                <figcaption class="figure-caption text-center">StethoSpeech is a speech generation mechanism in a zero-pair setting. It comprises data preparation, which generates ground-truth speech corresponding to input vibrations, a sequence-to-sequence component that maps self-supervised representations of vibrations to self-supervised representations of speech, and a speech decoder that produces output speech corresponding to the input vibrations.</figcaption>
             </figure>
         </div>
     </div>
 
     <div class="d-block p-3">
         <div class="row">
-            <h3>Comparing speech generated with baselines and StethoSpeech methods on CSTR NAM TIMIT Plus corpus</h3>
+            <h3>Comparing speech generated with baselines and StethoSpeech methods on CSTR_demo_samples NAM TIMIT Plus corpus</h3>
         </div>
 
         <div class="row d-flex table-responsive overflow-auto">
@@ -76,38 +76,38 @@
                     <tr class="flex-row">
                         <td>It is a terrible loss.</td>
                         <td class="text-center">
-                            <audio controls src="resources/cstr/nam/401.wav"></audio>
+                            <audio controls src="resources/CSTR_demo_samples/nam/401.wav"></audio>
                         </td>
                         <td class="text-center">
-                            <audio controls src="resources/cstr/discogan/discogan_401.mp3"></audio>
+                            <audio controls src="resources/CSTR_demo_samples/discogan/discogan_401.mp3"></audio>
                         </td>
                         <td class="text-center">
-                            <audio controls src="resources/cstr/mspecnet/mspec_401.mp3"></audio>
+                            <audio controls src="resources/CSTR_demo_samples/mspecnet/mspec_401.mp3"></audio>
                         </td>
                         <td class="text-center">
-                            <audio controls src="resources/cstr/paired/401.wav"></audio>
+                            <audio controls src="resources/CSTR_demo_samples/paired/401.wav"></audio>
                         </td>
                         <td class="text-center">
-                            <audio controls src="resources/cstr/unpaired/401.wav"></audio>
+                            <audio controls src="resources/CSTR_demo_samples/unpaired/401.wav"></audio>
                         </td>
                     </tr>
 
                     <tr class="flex-row">
                         <td>It's the whole season.</td>
                         <td class="text-center">
-                            <audio controls src="resources/cstr/nam/405.wav"></audio>
+                            <audio controls src="resources/CSTR_demo_samples/nam/405.wav"></audio>
                         </td>
                         <td class="text-center">
-                            <audio controls src="resources/cstr/discogan/discogan_405.mp3"></audio>
+                            <audio controls src="resources/CSTR_demo_samples/discogan/discogan_405.mp3"></audio>
                         </td>
                         <td class="text-center">
-                            <audio controls src="resources/cstr/mspecnet/mspec_405.mp3"></audio>
+                            <audio controls src="resources/CSTR_demo_samples/mspecnet/mspec_405.mp3"></audio>
                         </td>
                         <td class="text-center">
-                            <audio controls src="resources/cstr/paired/405.wav"></audio>
+                            <audio controls src="resources/CSTR_demo_samples/paired/405.wav"></audio>
                         </td>
                         <td class="text-center">
-                            <audio controls src="resources/cstr/unpaired/405.wav"></audio>
+                            <audio controls src="resources/CSTR_demo_samples/unpaired/405.wav"></audio>
                         </td>
                     </tr>
                 </tbody>
@@ -116,7 +116,7 @@
 
         <div class="d-block p-3">
             <div class="row">
-                <h3>Generated ground-truth using paired and unpaired methods on CSTR NAM TIMIT Plus corpus</h3>
+                <h3>Generated ground-truth using paired and unpaired methods on CSTR_demo_samples NAM TIMIT Plus corpus</h3>
             </div>
     
             <div class="row d-flex table-responsive overflow-auto">
@@ -135,61 +135,61 @@
                         <tr class="flex-row">
                             <td>I think we're going to make it.</td>
                             <td class="text-center">
-                                <audio controls src="resources/cstr/nam/192.wav"></audio>
+                                <audio controls src="resources/CSTR_demo_samples/nam/192.wav"></audio>
                             </td>
                             <td class="text-center">
-                                <audio controls src="resources/cstr/groundtruth/paired/192.wav"></audio>
+                                <audio controls src="resources/CSTR_demo_samples/groundtruth/paired/192.wav"></audio>
                             </td>
                             <td class="text-center">
-                                <audio controls src="resources/cstr/groundtruth/unpaired/192.wav"></audio>
+                                <audio controls src="resources/CSTR_demo_samples/groundtruth/unpaired/192.wav"></audio>
                             </td>
                         </tr>
                         <tr class="flex-row">
                             <td>I now know that from memory.</td>
                             <td class="text-center">
-                                <audio controls src="resources/cstr/nam/202.wav"></audio>
+                                <audio controls src="resources/CSTR_demo_samples/nam/202.wav"></audio>
                             </td>
                             <td class="text-center">
-                                <audio controls src="resources/cstr/groundtruth/paired/202.wav"></audio>
+                                <audio controls src="resources/CSTR_demo_samples/groundtruth/paired/202.wav"></audio>
                             </td>
                             <td class="text-center">
-                                <audio controls src="resources/cstr/groundtruth/unpaired/202.wav"></audio>
+                                <audio controls src="resources/CSTR_demo_samples/groundtruth/unpaired/202.wav"></audio>
                             </td>
                         </tr>
                         <tr class="flex-row">
                             <td>They have no other children.</td>
                             <td class="text-center">
-                                <audio controls src="resources/cstr/nam/272.wav"></audio>
+                                <audio controls src="resources/CSTR_demo_samples/nam/272.wav"></audio>
                             </td>
                             <td class="text-center">
-                                <audio controls src="resources/cstr/groundtruth/paired/272.wav"></audio>
+                                <audio controls src="resources/CSTR_demo_samples/groundtruth/paired/272.wav"></audio>
                             </td>
                             <td class="text-center">
-                                <audio controls src="resources/cstr/groundtruth/unpaired/272.wav"></audio>
+                                <audio controls src="resources/CSTR_demo_samples/groundtruth/unpaired/272.wav"></audio>
                             </td>
                         </tr>
                         <tr class="flex-row">
                             <td>That was a month ago.</td>
                             <td class="text-center">
-                                <audio controls src="resources/cstr/nam/319.wav"></audio>
+                                <audio controls src="resources/CSTR_demo_samples/nam/319.wav"></audio>
                             </td>
                             <td class="text-center">
-                                <audio controls src="resources/cstr/groundtruth/paired/319.wav"></audio>
+                                <audio controls src="resources/CSTR_demo_samples/groundtruth/paired/319.wav"></audio>
                             </td>
                             <td class="text-center">
-                                <audio controls src="resources/cstr/groundtruth/unpaired/319.wav"></audio>
+                                <audio controls src="resources/CSTR_demo_samples/groundtruth/unpaired/319.wav"></audio>
                             </td>
                         </tr>
                         <tr class="flex-row">
                             <td>It's the whole season.</td>
                             <td class="text-center">
-                                <audio controls src="resources/cstr/nam/405.wav"></audio>
+                                <audio controls src="resources/CSTR_demo_samples/nam/405.wav"></audio>
                             </td>
                             <td class="text-center">
-                                <audio controls src="resources/cstr/groundtruth/paired/405.wav"></audio>
+                                <audio controls src="resources/CSTR_demo_samples/groundtruth/paired/405.wav"></audio>
                             </td>
                             <td class="text-center">
-                                <audio controls src="resources/cstr/groundtruth/unpaired/405.wav"></audio>
+                                <audio controls src="resources/CSTR_demo_samples/groundtruth/unpaired/405.wav"></audio>
                             </td>
                         </tr>
                     </tbody>
@@ -199,7 +199,7 @@
 
         <div class="row p-4"></div>
         <div class="row">
-            <h3>More samples from our proposed methods on CSTR NAM TIMIT Plus corpus</h3>
+            <h3>More samples from our proposed methods on CSTR_demo_samples NAM TIMIT Plus corpus</h3>
         </div>
         <div class="row d-flex table-responsive overflow-auto">
             <table class="table table-bordered m-3">
@@ -217,121 +217,121 @@
                     <tr class="flex-row">
                         <td>I am not retiring.</td>
                         <td class="text-center">
-                            <audio controls src="resources/cstr/nam/394.wav"></audio>
+                            <audio controls src="resources/CSTR_demo_samples/nam/394.wav"></audio>
                         </td>
                         <td class="text-center">
-                            <audio controls src="resources/cstr/paired/394.mp3"></audio>
+                            <audio controls src="resources/CSTR_demo_samples/paired/394.mp3"></audio>
                         </td>
                         <td class="text-center">
-                            <audio controls src="resources/cstr/unpaired/394.mp3"></audio>
+                            <audio controls src="resources/CSTR_demo_samples/unpaired/394.mp3"></audio>
                         </td>
                     </tr>
                     <tr class="flex-row">
                         <td>I hated the word.</td>
                         <td class="text-center">
-                            <audio controls src="resources/cstr/nam/353.wav"></audio>
+                            <audio controls src="resources/CSTR_demo_samples/nam/353.wav"></audio>
                         </td>
                         <td class="text-center">
-                            <audio controls src="resources/cstr/paired/353.wav"></audio>
+                            <audio controls src="resources/CSTR_demo_samples/paired/353.wav"></audio>
                         </td>
                         <td class="text-center">
-                            <audio controls src="resources/cstr/unpaired/353.wav"></audio>
+                            <audio controls src="resources/CSTR_demo_samples/unpaired/353.wav"></audio>
                         </td>
                     </tr>
                     <tr class="flex-row">
                         <td>That was a month ago.</td>
                         <td class="text-center">
-                            <audio controls src="resources/cstr/nam/319.wav"></audio>
+                            <audio controls src="resources/CSTR_demo_samples/nam/319.wav"></audio>
                         </td>
                         <td class="text-center">
-                            <audio controls src="resources/cstr/paired/319.mp3"></audio>
+                            <audio controls src="resources/CSTR_demo_samples/paired/319.mp3"></audio>
                         </td>
                         <td class="text-center">
-                            <audio controls src="resources/cstr/unpaired/319.mp3"></audio>
+                            <audio controls src="resources/CSTR_demo_samples/unpaired/319.mp3"></audio>
                         </td>
                     </tr>
                     <tr class="flex-row">
                         <td>People have been wonderful beyond belief.</td>
                         <td class="text-center">
-                            <audio controls src="resources/cstr/nam/112.wav"></audio>
+                            <audio controls src="resources/CSTR_demo_samples/nam/112.wav"></audio>
                         </td>
                         <td class="text-center">
-                            <audio controls src="resources/cstr/paired/112.wav"></audio>
+                            <audio controls src="resources/CSTR_demo_samples/paired/112.wav"></audio>
                         </td>
                         <td class="text-center">
-                            <audio controls src="resources/cstr/unpaired/112.wav"></audio>
+                            <audio controls src="resources/CSTR_demo_samples/unpaired/112.wav"></audio>
                         </td>
                     </tr>
                     <tr class="flex-row">
                         <td>I think we're going to make it.</td>
                         <td class="text-center">
-                            <audio controls src="resources/cstr/nam/192.wav"></audio>
+                            <audio controls src="resources/CSTR_demo_samples/nam/192.wav"></audio>
                         </td>
                         <td class="text-center">
-                            <audio controls src="resources/cstr/paired/192.wav"></audio>
+                            <audio controls src="resources/CSTR_demo_samples/paired/192.wav"></audio>
                         </td>
                         <td class="text-center">
-                            <audio controls src="resources/cstr/unpaired/192.wav"></audio>
+                            <audio controls src="resources/CSTR_demo_samples/unpaired/192.wav"></audio>
                         </td>
                     </tr>
                     <tr class="flex-row">
                         <td>I didn't know where they were.</td>
                         <td class="text-center">
-                            <audio controls src="resources/cstr/nam/193.wav"></audio>
+                            <audio controls src="resources/CSTR_demo_samples/nam/193.wav"></audio>
                         </td>
                         <td class="text-center">
-                            <audio controls src="resources/cstr/paired/193.wav"></audio>
+                            <audio controls src="resources/CSTR_demo_samples/paired/193.wav"></audio>
                         </td>
                         <td class="text-center">
-                            <audio controls src="resources/cstr/unpaired/193.wav"></audio>
+                            <audio controls src="resources/CSTR_demo_samples/unpaired/193.wav"></audio>
                         </td>
                     </tr>
                     <tr class="flex-row">
                         <td>I now know that from memory.</td>
                         <td class="text-center">
-                            <audio controls src="resources/cstr/nam/202.wav"></audio>
+                            <audio controls src="resources/CSTR_demo_samples/nam/202.wav"></audio>
                         </td>
                         <td class="text-center">
-                            <audio controls src="resources/cstr/paired/202.wav"></audio>
+                            <audio controls src="resources/CSTR_demo_samples/paired/202.wav"></audio>
                         </td>
                         <td class="text-center">
-                            <audio controls src="resources/cstr/unpaired/202.wav"></audio>
+                            <audio controls src="resources/CSTR_demo_samples/unpaired/202.wav"></audio>
                         </td>
                     </tr>
                     <tr class="flex-row">
                         <td>The decision was welcomed by downing street.</td>
                         <td class="text-center">
-                            <audio controls src="resources/cstr/nam/203.wav"></audio>
+                            <audio controls src="resources/CSTR_demo_samples/nam/203.wav"></audio>
                         </td>
                         <td class="text-center">
-                            <audio controls src="resources/cstr/paired/203.wav"></audio>
+                            <audio controls src="resources/CSTR_demo_samples/paired/203.wav"></audio>
                         </td>
                         <td class="text-center">
-                            <audio controls src="resources/cstr/unpaired/203.wav"></audio>
+                            <audio controls src="resources/CSTR_demo_samples/unpaired/203.wav"></audio>
                         </td>
                     </tr>
                     <tr class="flex-row">
                         <td>Like everything in scotland it takes time.</td>
                         <td class="text-center">
-                            <audio controls src="resources/cstr/nam/208.wav"></audio>
+                            <audio controls src="resources/CSTR_demo_samples/nam/208.wav"></audio>
                         </td>
                         <td class="text-center">
-                            <audio controls src="resources/cstr/paired/208.wav"></audio>
+                            <audio controls src="resources/CSTR_demo_samples/paired/208.wav"></audio>
                         </td>
                         <td class="text-center">
-                            <audio controls src="resources/cstr/unpaired/208.wav"></audio>
+                            <audio controls src="resources/CSTR_demo_samples/unpaired/208.wav"></audio>
                         </td>
                     </tr>
                     <tr class="flex-row">
                         <td>There was a battle their.</td>
                         <td class="text-center">
-                            <audio controls src="resources/cstr/nam/042.wav"></audio>
+                            <audio controls src="resources/CSTR_demo_samples/nam/042.wav"></audio>
                         </td>
                         <td class="text-center">
-                            <audio controls src="resources/cstr/paired/042.wav"></audio>
+                            <audio controls src="resources/CSTR_demo_samples/paired/042.wav"></audio>
                         </td>
                         <td class="text-center">
-                            <audio controls src="resources/cstr/unpaired/042.wav"></audio>
+                            <audio controls src="resources/CSTR_demo_samples/unpaired/042.wav"></audio>
                         </td>
                     </tr>
                 </tbody>
@@ -340,7 +340,7 @@
 
         <div class="row p-5"></div>
         <div class="row">
-            <h3>Samples from speaker s1 in CVIT NAM corpus</h3>
+            <h3>Samples from speaker s1 in StethoText_demo_samples NAM corpus</h3>
         </div>
         <div class="row d-flex table-responsive overflow-auto">
             <table class="table table-bordered m-3">
@@ -359,91 +359,91 @@
                     <tr class="flex-row">
                         <td>He will never walk the streets again.</td>
                         <td class="text-center">
-                            <audio controls src="resources/cvit/s1/nam/neilnam_012.wav"></audio>
+                            <audio controls src="resources/StethoText_demo_samples/s1/nam/neilnam_012.wav"></audio>
                         </td>
                         <td class="text-center">
-                            <audio controls src="resources/cvit/s1/groundtruth/neilnam_012.wav"></audio>
+                            <audio controls src="resources/StethoText_demo_samples/s1/groundtruth/neilnam_012.wav"></audio>
                         </td>
                         <td class="text-center">
-                            <audio controls src="resources/cvit/s1/ljvoice/neilnam_012.wav"></audio>
+                            <audio controls src="resources/StethoText_demo_samples/s1/ljvoice/neilnam_012.wav"></audio>
                         </td>
                         <td class="text-center">
-                            <audio controls src="resources/cvit/s1/indianmalevoice/neilnam_012.wav"></audio>
+                            <audio controls src="resources/StethoText_demo_samples/s1/indianmalevoice/neilnam_012.wav"></audio>
                         </td>
                     </tr>
                     <tr class="flex-row">
                         <td>He was the architect.</td>
                         <td class="text-center">
-                            <audio controls src="resources/cvit/s1/nam/neilnam_98.wav"></audio>
+                            <audio controls src="resources/StethoText_demo_samples/s1/nam/neilnam_98.wav"></audio>
                         </td>
                         <td class="text-center">
-                            <audio controls src="resources/cvit/s1/groundtruth/neilnam_98.wav"></audio>
+                            <audio controls src="resources/StethoText_demo_samples/s1/groundtruth/neilnam_98.wav"></audio>
                         </td>
                         <td class="text-center">
-                            <audio controls src="resources/cvit/s1/ljvoice/neilnam_98.wav"></audio>
+                            <audio controls src="resources/StethoText_demo_samples/s1/ljvoice/neilnam_98.wav"></audio>
                         </td>
                         <td class="text-center">
-                            <audio controls src="resources/cvit/s1/indianmalevoice/neilnam_98.wav"></audio>
+                            <audio controls src="resources/StethoText_demo_samples/s1/indianmalevoice/neilnam_98.wav"></audio>
                         </td>
                     </tr>
                     <tr class="flex-row">
                         <td>The lion followed him and overtook the camel.</td>
                         <td class="text-center">
-                            <audio controls src="resources/cvit/s1/nam/neilnam_IITM_458.wav"></audio>
+                            <audio controls src="resources/StethoText_demo_samples/s1/nam/neilnam_IITM_458.wav"></audio>
                         </td>
                         <td class="text-center">
-                            <audio controls src="resources/cvit/s1/groundtruth/neilnam_IITM_458.wav"></audio>
+                            <audio controls src="resources/StethoText_demo_samples/s1/groundtruth/neilnam_IITM_458.wav"></audio>
                         </td>
                         <td class="text-center">
-                            <audio controls src="resources/cvit/s1/ljvoice/neilnam_IITM_458.wav"></audio>
+                            <audio controls src="resources/StethoText_demo_samples/s1/ljvoice/neilnam_IITM_458.wav"></audio>
                         </td>
                         <td class="text-center">
-                            <audio controls src="resources/cvit/s1/indianmalevoice/neilnam_IITM_458.wav"></audio>
+                            <audio controls src="resources/StethoText_demo_samples/s1/indianmalevoice/neilnam_IITM_458.wav"></audio>
                         </td>
                     </tr>
                     <tr class="flex-row">
                         <td>Lion demanded to know the story.</td>
                         <td class="text-center">
-                            <audio controls src="resources/cvit/s1/nam/neilnam_IITM_1346.wav"></audio>
+                            <audio controls src="resources/StethoText_demo_samples/s1/nam/neilnam_IITM_1346.wav"></audio>
                         </td>
                         <td class="text-center">
-                            <audio controls src="resources/cvit/s1/groundtruth/neilnam_IITM_1346.wav"></audio>
+                            <audio controls src="resources/StethoText_demo_samples/s1/groundtruth/neilnam_IITM_1346.wav"></audio>
                         </td>
                         <td class="text-center">
-                            <audio controls src="resources/cvit/s1/ljvoice/neilnam_IITM_1346.wav"></audio>
+                            <audio controls src="resources/StethoText_demo_samples/s1/ljvoice/neilnam_IITM_1346.wav"></audio>
                         </td>
                         <td class="text-center">
-                            <audio controls src="resources/cvit/s1/indianmalevoice/neilnam_IITM_1346.wav"></audio>
+                            <audio controls src="resources/StethoText_demo_samples/s1/indianmalevoice/neilnam_IITM_1346.wav"></audio>
                         </td>
                     </tr>
                     <tr class="flex-row">
                         <td>Let us kill him and survive.</td>
                         <td class="text-center">
-                            <audio controls src="resources/cvit/s1/nam/neilnam_IITM_2355.wav"></audio>
+                            <audio controls src="resources/StethoText_demo_samples/s1/nam/neilnam_IITM_2355.wav"></audio>
                         </td>
                         <td class="text-center">
-                            <audio controls src="resources/cvit/s1/groundtruth/neilnam_IITM_2355.wav"></audio>
+                            <audio controls src="resources/StethoText_demo_samples/s1/groundtruth/neilnam_IITM_2355.wav"></audio>
                         </td>
                         <td class="text-center">
-                            <audio controls src="resources/cvit/s1/ljvoice/neilnam_IITM_2355.wav"></audio>
+                            <audio controls src="resources/StethoText_demo_samples/s1/ljvoice/neilnam_IITM_2355.wav"></audio>
                         </td>
                         <td class="text-center">
-                            <audio controls src="resources/cvit/s1/indianmalevoice/neilnam_IITM_2355.wav"></audio>
+                            <audio controls src="resources/StethoText_demo_samples/s1/indianmalevoice/neilnam_IITM_2355.wav"></audio>
                         </td>
                     </tr>
                     <tr class="flex-row">
                         <td>They would then be able to make money.</td>
                         <td class="text-center">
-                            <audio controls src="resources/cvit/s1/nam/neilnam_IITM_2728.wav"></audio>
+                            <audio controls src="resources/StethoText_demo_samples/s1/nam/neilnam_IITM_2728.wav"></audio>
                         </td>
                         <td class="text-center">
-                            <audio controls src="resources/cvit/s1/groundtruth/neilnam_IITM_2728.wav"></audio>
+                            <audio controls src="resources/StethoText_demo_samples/s1/groundtruth/neilnam_IITM_2728.wav"></audio>
                         </td>
                         <td class="text-center">
-                            <audio controls src="resources/cvit/s1/ljvoice/neilnam_IITM_2728.wav"></audio>
+                            <audio controls src="resources/StethoText_demo_samples/s1/ljvoice/neilnam_IITM_2728.wav"></audio>
                         </td>
                         <td class="text-center">
-                            <audio controls src="resources/cvit/s1/indianmalevoice/neilnam_IITM_2728.wav"></audio>
+                            <audio controls src="resources/StethoText_demo_samples/s1/indianmalevoice/neilnam_IITM_2728.wav"></audio>
                         </td>
                     </tr>
                 </tbody>
@@ -452,7 +452,7 @@
 
         <div class="row p-6"></div>
         <div class="row">
-            <h3>Samples from speaker s2 in CVIT NAM corpus</h3>
+            <h3>Samples from speaker s2 in StethoText_demo_samples NAM corpus</h3>
         </div>
         <div class="row d-flex table-responsive overflow-auto">
             <table class="table table-bordered m-3">
@@ -471,91 +471,91 @@
                     <tr class="flex-row">
                         <td>I suggest you must offer yourself to the lion.</td>
                         <td class="text-center">
-                            <audio controls src="resources/cvit/s2/nam/nehanam_IITM_575.wav"></audio>
+                            <audio controls src="resources/StethoText_demo_samples/s2/nam/nehanam_IITM_575.wav"></audio>
                         </td>
                         <td class="text-center">
-                            <audio controls src="resources/cvit/s2/groundtruth/nehanam_IITM_575.wav"></audio>
+                            <audio controls src="resources/StethoText_demo_samples/s2/groundtruth/nehanam_IITM_575.wav"></audio>
                         </td>
                         <td class="text-center">
-                            <audio controls src="resources/cvit/s2/ljvoice/nehanam_IITM_575.wav"></audio>
+                            <audio controls src="resources/StethoText_demo_samples/s2/ljvoice/nehanam_IITM_575.wav"></audio>
                         </td>
                         <td class="text-center">
-                            <audio controls src="resources/cvit/s2/indianfemalevoice/nehanam_IITM_575.wav"></audio>
+                            <audio controls src="resources/StethoText_demo_samples/s2/indianfemalevoice/nehanam_IITM_575.wav"></audio>
                         </td>
                     </tr>
                     <tr class="flex-row">
                         <td>The jury is still out.</td>
                         <td class="text-center">
-                            <audio controls src="resources/cvit/s2/nam/nehanam_45.wav"></audio>
+                            <audio controls src="resources/StethoText_demo_samples/s2/nam/nehanam_45.wav"></audio>
                         </td>
                         <td class="text-center">
-                            <audio controls src="resources/cvit/s2/groundtruth/nehanam_45.wav"></audio>
+                            <audio controls src="resources/StethoText_demo_samples/s2/groundtruth/nehanam_45.wav"></audio>
                         </td>
                         <td class="text-center">
-                            <audio controls src="resources/cvit/s2/ljvoice/nehanam_45.wav"></audio>
+                            <audio controls src="resources/StethoText_demo_samples/s2/ljvoice/nehanam_45.wav"></audio>
                         </td>
                         <td class="text-center">
-                            <audio controls src="resources/cvit/s2/indianfemalevoice/nehanam_45.wav"></audio>
+                            <audio controls src="resources/StethoText_demo_samples/s2/indianfemalevoice/nehanam_45.wav"></audio>
                         </td>
                     </tr>
                     <tr class="flex-row">
                         <td>This will help our confidence.</td>
                         <td class="text-center">
-                            <audio controls src="resources/cvit/s2/nam/nehanam_94.wav"></audio>
+                            <audio controls src="resources/StethoText_demo_samples/s2/nam/nehanam_94.wav"></audio>
                         </td>
                         <td class="text-center">
-                            <audio controls src="resources/cvit/s2/groundtruth/nehanam_94.wav"></audio>
+                            <audio controls src="resources/StethoText_demo_samples/s2/groundtruth/nehanam_94.wav"></audio>
                         </td>
                         <td class="text-center">
-                            <audio controls src="resources/cvit/s2/ljvoice/nehanam_94.wav"></audio>
+                            <audio controls src="resources/StethoText_demo_samples/s2/ljvoice/nehanam_94.wav"></audio>
                         </td>
                         <td class="text-center">
-                            <audio controls src="resources/cvit/s2/indianfemalevoice/nehanam_94.wav"></audio>
+                            <audio controls src="resources/StethoText_demo_samples/s2/indianfemalevoice/nehanam_94.wav"></audio>
                         </td>
                     </tr>
                     <tr class="flex-row">
                         <td>And there was a dog that barked.</td>
                         <td class="text-center">
-                            <audio controls src="resources/cvit/s2/nam/nehanam_IITM_279.wav"></audio>
+                            <audio controls src="resources/StethoText_demo_samples/s2/nam/nehanam_IITM_279.wav"></audio>
                         </td>
                         <td class="text-center">
-                            <audio controls src="resources/cvit/s2/groundtruth/nehanam_IITM_279.wav"></audio>
+                            <audio controls src="resources/StethoText_demo_samples/s2/groundtruth/nehanam_IITM_279.wav"></audio>
                         </td>
                         <td class="text-center">
-                            <audio controls src="resources/cvit/s2/ljvoice/nehanam_IITM_279.wav"></audio>
+                            <audio controls src="resources/StethoText_demo_samples/s2/ljvoice/nehanam_IITM_279.wav"></audio>
                         </td>
                         <td class="text-center">
-                            <audio controls src="resources/cvit/s2/indianfemalevoice/nehanam_IITM_279.wav"></audio>
+                            <audio controls src="resources/StethoText_demo_samples/s2/indianfemalevoice/nehanam_IITM_279.wav"></audio>
                         </td>
                     </tr>
                     <tr class="flex-row">
                         <td>He was eager to show his mother, how brave he was.</td>
                         <td class="text-center">
-                            <audio controls src="resources/cvit/s2/nam/nehanam_IITM_312.wav"></audio>
+                            <audio controls src="resources/StethoText_demo_samples/s2/nam/nehanam_IITM_312.wav"></audio>
                         </td>
                         <td class="text-center">
-                            <audio controls src="resources/cvit/s2/groundtruth/nehanam_IITM_312.wav"></audio>
+                            <audio controls src="resources/StethoText_demo_samples/s2/groundtruth/nehanam_IITM_312.wav"></audio>
                         </td>
                         <td class="text-center">
-                            <audio controls src="resources/cvit/s2/ljvoice/nehanam_IITM_312.wav"></audio>
+                            <audio controls src="resources/StethoText_demo_samples/s2/ljvoice/nehanam_IITM_312.wav"></audio>
                         </td>
                         <td class="text-center">
-                            <audio controls src="resources/cvit/s2/indianfemalevoice/nehanam_IITM_312.wav"></audio>
+                            <audio controls src="resources/StethoText_demo_samples/s2/indianfemalevoice/nehanam_IITM_312.wav"></audio>
                         </td>
                     </tr>
                     <tr class="flex-row">
                         <td>He kept repeating it, all the way.</td>
                         <td class="text-center">
-                            <audio controls src="resources/cvit/s2/nam/nehanam_IITM_333.wav"></audio>
+                            <audio controls src="resources/StethoText_demo_samples/s2/nam/nehanam_IITM_333.wav"></audio>
                         </td>
                         <td class="text-center">
-                            <audio controls src="resources/cvit/s2/groundtruth/nehanam_IITM_333.wav"></audio>
+                            <audio controls src="resources/StethoText_demo_samples/s2/groundtruth/nehanam_IITM_333.wav"></audio>
                         </td>
                         <td class="text-center">
-                            <audio controls src="resources/cvit/s2/ljvoice/nehanam_IITM_333.wav"></audio>
+                            <audio controls src="resources/StethoText_demo_samples/s2/ljvoice/nehanam_IITM_333.wav"></audio>
                         </td>
                         <td class="text-center">
-                            <audio controls src="resources/cvit/s2/indianfemalevoice/nehanam_IITM_333.wav"></audio>
+                            <audio controls src="resources/StethoText_demo_samples/s2/indianfemalevoice/nehanam_IITM_333.wav"></audio>
                         </td>
                     </tr>
                 </tbody>
@@ -582,58 +582,58 @@
                 </thead>
                 <tbody>
                     <tr class="flex-row">
-                        <td>you have to think not.</td>
-                        <td class="text-center">
-                            <audio controls src="resources/cvit/noisyexp/noisyspeech/unity15.wav"></audio>
-                        </td>
-                        <td>you have to think about.</td>
-                        <td class="text-center">
-                            <audio controls src="resources/cvit/noisyexp/noisynam/unity_nam15.wav"></audio>
-                        </td>
-                        <td class="text-center">
-                            <audio controls src="resources/cvit/noisyexp/noisynamstethospeechoutput/unity_nam15_generated.wav"></audio>
-                        </td>
-                        <td>you have to think not.</td>
-                    </tr>
-                    <tr class="flex-row">
                         <td>the israeli military denied the claim.</td>
                         <td class="text-center">
-                            <audio controls src="resources/cvit/noisyexp/noisyspeech/unity_nam8.wav"></audio>
+                            <audio controls src="resources/StethoText_demo_samples/noisyexp/noisyspeech/unity_nam8.wav"></audio>
                         </td>
                         <td>yeah it is tiny and it looks really nice to me.</td>
                         <td class="text-center">
-                            <audio controls src="resources/cvit/noisyexp/noisynam/unity_nam8.wav"></audio>
+                            <audio controls src="resources/StethoText_demo_samples/noisyexp/noisynam/unity_nam8.wav"></audio>
                         </td>
                         <td class="text-center">
-                            <audio controls src="resources/cvit/noisyexp/noisynamstethospeechoutput/unity_nam8_generated.wav"></audio>
+                            <audio controls src="resources/StethoText_demo_samples/noisyexp/noisynamstethospeechoutput/unity_nam8_generated.wav"></audio>
                         </td>
                         <td>israeli military denied the claim.</td>
                     </tr>
                     <tr class="flex-row">
+                        <td>you have to think not.</td>
+                        <td class="text-center">
+                            <audio controls src="resources/StethoText_demo_samples/noisyexp/noisyspeech/unity15.wav"></audio>
+                        </td>
+                        <td>you have to think about.</td>
+                        <td class="text-center">
+                            <audio controls src="resources/StethoText_demo_samples/noisyexp/noisynam/unity_nam15.wav"></audio>
+                        </td>
+                        <td class="text-center">
+                            <audio controls src="resources/StethoText_demo_samples/noisyexp/noisynamstethospeechoutput/unity_nam15_generated.wav"></audio>
+                        </td>
+                        <td>you have to think not.</td>
+                    </tr>
+                    <tr class="flex-row">
                         <td>our legal advice is clear.</td>
                         <td class="text-center">
-                            <audio controls src="resources/cvit/noisyexp/noisyspeech/unity11.wav"></audio>
+                            <audio controls src="resources/StethoText_demo_samples/noisyexp/noisyspeech/unity11.wav"></audio>
                         </td>
                         <td>i love you but maybe i do not know.</td>
                         <td class="text-center">
-                            <audio controls src="resources/cvit/noisyexp/noisynam/unity_nam11.wav"></audio>
+                            <audio controls src="resources/StethoText_demo_samples/noisyexp/noisynam/unity_nam11.wav"></audio>
                         </td>
                         <td class="text-center">
-                            <audio controls src="resources/cvit/noisyexp/noisynamstethospeechoutput/unity_nam11_generated.wav"></audio>
+                            <audio controls src="resources/StethoText_demo_samples/noisyexp/noisynamstethospeechoutput/unity_nam11_generated.wav"></audio>
                         </td>
                         <td>our legal advice is clear.</td>
                     </tr>
                     <tr class="flex-row">
                         <td>who are the democrats</td>
                         <td class="text-center">
-                            <audio controls src="resources/cvit/noisyexp/noisyspeech/unity1.wav"></audio>
+                            <audio controls src="resources/StethoText_demo_samples/noisyexp/noisyspeech/unity1.wav"></audio>
                         </td>
                         <td>who are the demogorgon</td>
                         <td class="text-center">
-                            <audio controls src="resources/cvit/noisyexp/noisynam/unity_nam1.wav"></audio>
+                            <audio controls src="resources/StethoText_demo_samples/noisyexp/noisynam/unity_nam1.wav"></audio>
                         </td>
                         <td class="text-center">
-                            <audio controls src="resources/cvit/noisyexp/noisynamstethospeechoutput/unity_nam1_generated.wav"></audio>
+                            <audio controls src="resources/StethoText_demo_samples/noisyexp/noisynamstethospeechoutput/unity_nam1_generated.wav"></audio>
                         </td>
                         <td>who are the democrats</td>
                     </tr>
