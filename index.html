@@ -35,7 +35,7 @@
         </div>
         <div class="row">
             <p class="fs-5">
-                StethoSpeech is a Silent Speech Interface (SSI) that captures flesh-conducted vibrations behind the ear and transforms them into speech. This innovation can greatly improve social interactions for those with voice disorders and also enable discreet communication in public. Unlike traditional SSIs, StethoSpeech doesn't require specific speaker-paired data, making it practical for severe medical conditions. The system includes data preparation, a self-supervised speech encoder, a sequence-to-sequence network for modality mapping, and a speech decoder. We introduce a groundbreaking large-scale StethoText dataset, the first of its kind, for transforming speaker-specific vibrations into audible and understandable speech in a natural setting, and advancing voice disorder treatment through signal processing. Furthermore, StethoSpeech excels in experiments, enhancing speech quality, intelligibility, and prosody on the CSTR NAM TIMIT Plus corpus. Speech samples can be found at https://stethospeech.github.io/StethoSpeech/
+                We introduce StethoSpeech, a Silent Speech Interface that transforms flesh-conducted vibrations behind the ear into speech. The innovation is aimed to improve social interactions for those with voice disorders and enable discreet public communication. Unlike prior efforts, StethoSpeech does not require the paired speech data for the recorded vibrations. Furthermore, it does not need a specialized device for recording the vibrations and can work with an off-the-shelf clinical stethoscope. The novelty of the framework lies in overall design, simulation of ground truth speech, and sequence-to-sequence translation network, which works in the latent space. We present comprehensive experiments on the existing CSTR NAM TIMIT Plus corpus and the newly proposed StethoText dataset. Our results show that StethoSpeech provides natural-sounding and intelligible speech, significantly outperforming the existing methods on several quantitative and qualitative metrics. We also demonstrate its ability to work in extremely noisy scenarios. Speech samples can be found at https://stethospeech.github.io/StethoSpeech/
             </p>
         </div>
 
@@ -48,7 +48,7 @@
         <div class="row">
             <figure class="figure text-center">
                 <img src="resources/teaser.png" alt="..." class="figure-img">
-                <figcaption class="figure-caption text-center">Example interaction of StethoSpeech. (A) StethoSpeech converts flesh-conducted vibrations into audible and intelligible speech. (B) Mel-spectrum of speech, where ASR predicts completely incorrect content when noisy speech is input. (C) Mel-spectrum of vibrations recorded by the stethoscope. (D) Mel-spectrum of speech converted by StethoSpeech, where ASR correctly predicts the content.</figcaption>
+                <figcaption class="figure-caption text-center">(a) StethoSpeech converts flesh-conducted vibrations into intelligible speech. (b) StethoSpeech is effective even when extremely loud music is playing in the background. Here, we show the Mel-spectrogram representations of recorded audio, the Stethoscopic vibrations, and converted speech using our proposed StethoSpeech. Output from an Automatic Speech Recognition (ASR) engine is shown on top. ASR completely fails to comprehend the noisy audio and the stethoscopic vibrations. It correctly predicts the converted speech using the StethoSpeech framework.</figcaption>
             </figure>
         </div>
 
@@ -61,7 +61,7 @@
         <div class="row">
             <figure class="figure text-center">
                 <img src="resources/method.png" alt="..." class="figure-img">
-                <figcaption class="figure-caption text-center">StethoSpeech is a speech generation mechanism in a zero-pair setting. It comprises data preparation, which generates ground-truth speech corresponding to input vibrations, a sequence-to-sequence component that maps self-supervised representations of vibrations to self-supervised representations of speech, and a speech decoder that produces output speech corresponding to the input vibrations.</figcaption>
+                <figcaption class="figure-caption text-center">StethoSpeech is a speech conversion mechanism from NAM vibrations. It comprises a data preparation step to generate ground-truth speech corresponding to NAM vibrations, a shared speech encoder (pre-trained and frozen) to extract self-supervised embeddings, a sequence-to-sequence network to map self-supervised embeddings of vibrations to that of speech, and a speech decoder to synthesize speech from the self-supervised speech embeddings.</figcaption>
             </figure>
         </div>
     </div>
@@ -87,6 +87,24 @@
                 </thead>
                 <tbody>
                     <tr class="flex-row">
+                        <td>It's the whole season.</td>
+                        <td class="text-center">
+                            <audio controls src="resources/CSTR_demo_samples/nam/405.wav"></audio>
+                        </td>
+                        <td class="text-center">
+                            <audio controls src="resources/CSTR_demo_samples/discogan/discogan_405.mp3"></audio>
+                        </td>
+                        <td class="text-center">
+                            <audio controls src="resources/CSTR_demo_samples/mspecnet/mspec_405.mp3"></audio>
+                        </td>
+                        <td class="text-center">
+                            <audio controls src="resources/CSTR_demo_samples/paired/405.wav"></audio>
+                        </td>
+                        <td class="text-center">
+                            <audio controls src="resources/CSTR_demo_samples/unpaired/405.wav"></audio>
+                        </td>
+                    </tr>
+                    <tr class="flex-row">
                         <td>It is a terrible loss.</td>
                         <td class="text-center">
                             <audio controls src="resources/CSTR_demo_samples/nam/401.wav"></audio>
@@ -105,24 +123,6 @@
                         </td>
                     </tr>
 
-                    <tr class="flex-row">
-                        <td>It's the whole season.</td>
-                        <td class="text-center">
-                            <audio controls src="resources/CSTR_demo_samples/nam/405.wav"></audio>
-                        </td>
-                        <td class="text-center">
-                            <audio controls src="resources/CSTR_demo_samples/discogan/discogan_405.mp3"></audio>
-                        </td>
-                        <td class="text-center">
-                            <audio controls src="resources/CSTR_demo_samples/mspecnet/mspec_405.mp3"></audio>
-                        </td>
-                        <td class="text-center">
-                            <audio controls src="resources/CSTR_demo_samples/paired/405.wav"></audio>
-                        </td>
-                        <td class="text-center">
-                            <audio controls src="resources/CSTR_demo_samples/unpaired/405.wav"></audio>
-                        </td>
-                    </tr>
                 </tbody>
             </table>
         </div>
@@ -678,9 +678,9 @@
                         </td>
                         <td>But his problem remained.</td>
                     </tr>
-                    
-                    
-                    
+                </tbody>
+            </table>
+        </div>             
     </div>
 </body>
 
