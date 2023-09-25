@@ -35,7 +35,7 @@
         </div>
         <div class="row">
             <p class="fs-5">
-                We introduce StethoSpeech, a Silent Speech Interface that transforms flesh-conducted vibrations behind the ear into speech. The innovation is aimed to improve social interactions for those with voice disorders and enable discreet public communication. Unlike prior efforts, StethoSpeech does not require the paired speech data for the recorded vibrations. Furthermore, it does not need a specialized device for recording the vibrations and can work with an off-the-shelf clinical stethoscope. The novelty of the framework lies in overall design, simulation of ground truth speech, and sequence-to-sequence translation network, which works in the latent space. We present comprehensive experiments on the existing CSTR NAM TIMIT Plus corpus and the newly proposed StethoText dataset. Our results show that StethoSpeech provides natural-sounding and intelligible speech, significantly outperforming the existing methods on several quantitative and qualitative metrics. We also demonstrate its ability to work in extremely noisy scenarios. Speech samples can be found at https://stethospeech.github.io/StethoSpeech/
+                We introduce StethoSpeech, a Silent Speech Interface that transforms flesh-conducted vibrations behind the ear into speech. The innovation is aimed to improve social interactions for those with voice disorders and enable discreet public communication. Unlike prior efforts, StethoSpeech does not require the paired speech data for the recorded vibrations. Furthermore, it does not need a specialized device for recording the vibrations and can work with an off-the-shelf clinical stethoscope. The novelty of the framework lies in overall design, simulation of ground truth speech, and sequence-to-sequence translation network, which works in the latent space. We present comprehensive experiments on the existing CSTR NAM TIMIT Plus corpus and the newly proposed StethoText dataset. Our results show that StethoSpeech provides natural-sounding and intelligible speech, significantly outperforming the existing methods on several quantitative and qualitative metrics. We also demonstrate its ability to work in extremely noisy scenarios.
             </p>
         </div>
 
@@ -46,8 +46,8 @@
         </div>
         <div class="row p-2"></div>
         <div class="row">
-            <figure class="figure text-center">
-                <img src="resources/teaser.png" alt="..." class="figure-img">
+            <figure class="figure text-center" style="max-width: 90%; margin: 0 auto;">
+                <img src="resources/teaser.png" alt="..." class="figure-img" style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
                 <figcaption class="figure-caption text-center">(a) StethoSpeech converts flesh-conducted vibrations into intelligible speech. (b) StethoSpeech is effective even when extremely loud music is playing in the background. Here, we show the Mel-spectrogram representations of recorded audio, the Stethoscopic vibrations, and converted speech using our proposed StethoSpeech. Output from an Automatic Speech Recognition (ASR) engine is shown on top. ASR completely fails to comprehend the noisy audio and the stethoscopic vibrations. It correctly predicts the converted speech using the StethoSpeech framework.</figcaption>
             </figure>
         </div>
@@ -59,8 +59,8 @@
         </div>
         <div class="row p-2"></div>
         <div class="row">
-            <figure class="figure text-center">
-                <img src="resources/method.png" alt="..." class="figure-img">
+            <figure class="figure text-center" style="max-width: 90%; margin: 0 auto;">
+                <img src="resources/method.png" alt="..." class="figure-img" style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
                 <figcaption class="figure-caption text-center">StethoSpeech is a speech conversion mechanism from NAM vibrations. It comprises a data preparation step to generate ground-truth speech corresponding to NAM vibrations, a shared speech encoder (pre-trained and frozen) to extract self-supervised embeddings, a sequence-to-sequence network to map self-supervised embeddings of vibrations to that of speech, and a speech decoder to synthesize speech from the self-supervised speech embeddings.</figcaption>
             </figure>
         </div>
@@ -263,7 +263,7 @@
                             <audio controls src="resources/CSTR_demo_samples/unpaired/319.mp3"></audio>
                         </td>
                     </tr>
-                    <tr class="flex-row">
+                    <!-- <tr class="flex-row">
                         <td>People have been wonderful beyond belief.</td>
                         <td class="text-center">
                             <audio controls src="resources/CSTR_demo_samples/nam/112.wav"></audio>
@@ -274,7 +274,7 @@
                         <td class="text-center">
                             <audio controls src="resources/CSTR_demo_samples/unpaired/112.wav"></audio>
                         </td>
-                    </tr>
+                    </tr> -->
                     <tr class="flex-row">
                         <td>I think we're going to make it.</td>
                         <td class="text-center">
@@ -287,7 +287,7 @@
                             <audio controls src="resources/CSTR_demo_samples/unpaired/192.wav"></audio>
                         </td>
                     </tr>
-                    <tr class="flex-row">
+                    <!-- <tr class="flex-row">
                         <td>I didn't know where they were.</td>
                         <td class="text-center">
                             <audio controls src="resources/CSTR_demo_samples/nam/193.wav"></audio>
@@ -298,7 +298,7 @@
                         <td class="text-center">
                             <audio controls src="resources/CSTR_demo_samples/unpaired/193.wav"></audio>
                         </td>
-                    </tr>
+                    </tr> -->
                     <tr class="flex-row">
                         <td>I now know that from memory.</td>
                         <td class="text-center">
@@ -323,7 +323,7 @@
                             <audio controls src="resources/CSTR_demo_samples/unpaired/203.wav"></audio>
                         </td>
                     </tr>
-                    <tr class="flex-row">
+                    <!-- <tr class="flex-row">
                         <td>Like everything in scotland it takes time.</td>
                         <td class="text-center">
                             <audio controls src="resources/CSTR_demo_samples/nam/208.wav"></audio>
@@ -334,8 +334,8 @@
                         <td class="text-center">
                             <audio controls src="resources/CSTR_demo_samples/unpaired/208.wav"></audio>
                         </td>
-                    </tr>
-                    <tr class="flex-row">
+                    </tr> -->
+                    <!-- <tr class="flex-row">
                         <td>There was a battle their.</td>
                         <td class="text-center">
                             <audio controls src="resources/CSTR_demo_samples/nam/042.wav"></audio>
@@ -346,7 +346,7 @@
                         <td class="text-center">
                             <audio controls src="resources/CSTR_demo_samples/unpaired/042.wav"></audio>
                         </td>
-                    </tr>
+                    </tr> -->
                 </tbody>
             </table>
         </div>
@@ -369,7 +369,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr class="flex-row">
+                    <!-- <tr class="flex-row">
                         <td>He will never walk the streets again.</td>
                         <td class="text-center">
                             <audio controls src="resources/StethoText_demo_samples/s1/nam/neilnam_012.wav"></audio>
@@ -383,8 +383,23 @@
                         <td class="text-center">
                             <audio controls src="resources/StethoText_demo_samples/s1/indianmalevoice/neilnam_012.wav"></audio>
                         </td>
-                    </tr>
+                    </tr> -->
                     <tr class="flex-row">
+                        <td>It is growing, every day, every hour.</td>
+                        <td class="text-center">
+                            <audio controls src="resources/StethoText_demo_samples/s1/nam/neilnam_IITM_826.wav"></audio>
+                        </td>
+                        <td class="text-center">
+                            <audio controls src="resources/StethoText_demo_samples/s1/groundtruth/neilnam_IITM_826.wav"></audio>
+                        </td>
+                        <td class="text-center">
+                            <audio controls src="resources/StethoText_demo_samples/s1/ljvoice/neilnam_IITM_826.wav"></audio>
+                        </td>
+                        <td class="text-center">
+                            <audio controls src="resources/StethoText_demo_samples/s1/indianmalevoice/neilnam_IITM_826.wav"></audio>
+                        </td>
+                    </tr>
+                    <!-- <tr class="flex-row">
                         <td>He was the architect.</td>
                         <td class="text-center">
                             <audio controls src="resources/StethoText_demo_samples/s1/nam/neilnam_98.wav"></audio>
@@ -397,6 +412,21 @@
                         </td>
                         <td class="text-center">
                             <audio controls src="resources/StethoText_demo_samples/s1/indianmalevoice/neilnam_98.wav"></audio>
+                        </td>
+                    </tr> -->
+                    <tr class="flex-row">
+                        <td>This is the essence of our philosophy.</td>
+                        <td class="text-center">
+                            <audio controls src="resources/StethoText_demo_samples/s1/nam/neilnam_IITM_2712.wav"></audio>
+                        </td>
+                        <td class="text-center">
+                            <audio controls src="resources/StethoText_demo_samples/s1/groundtruth/neilnam_IITM_2712.wav"></audio>
+                        </td>
+                        <td class="text-center">
+                            <audio controls src="resources/StethoText_demo_samples/s1/ljvoice/neilnam_IITM_2712.wav"></audio>
+                        </td>
+                        <td class="text-center">
+                            <audio controls src="resources/StethoText_demo_samples/s1/indianmalevoice/neilnam_IITM_2712.wav"></audio>
                         </td>
                     </tr>
                     <tr class="flex-row">
@@ -430,35 +460,35 @@
                         </td>
                     </tr>
                     <tr class="flex-row">
-                        <td>Let us kill him and survive.</td>
+                        <td>It has become a way of life.</td>
                         <td class="text-center">
-                            <audio controls src="resources/StethoText_demo_samples/s1/nam/neilnam_IITM_2355.wav"></audio>
+                            <audio controls src="resources/StethoText_demo_samples/s1/nam/neilnam_370.wav"></audio>
                         </td>
                         <td class="text-center">
-                            <audio controls src="resources/StethoText_demo_samples/s1/groundtruth/neilnam_IITM_2355.wav"></audio>
+                            <audio controls src="resources/StethoText_demo_samples/s1/groundtruth/neilnam_370.wav"></audio>
                         </td>
                         <td class="text-center">
-                            <audio controls src="resources/StethoText_demo_samples/s1/ljvoice/neilnam_IITM_2355.wav"></audio>
+                            <audio controls src="resources/StethoText_demo_samples/s1/ljvoice/neilnam_370.wav"></audio>
                         </td>
                         <td class="text-center">
-                            <audio controls src="resources/StethoText_demo_samples/s1/indianmalevoice/neilnam_IITM_2355.wav"></audio>
+                            <audio controls src="resources/StethoText_demo_samples/s1/indianmalevoice/neilnam_370.wav"></audio>
                         </td>
                     </tr>
                     <tr class="flex-row">
-                        <td>They would then be able to make money.</td>
+                        <td>The crow said that the camel was a domestic animal fit to be killed and eaten.</td>
                         <td class="text-center">
-                            <audio controls src="resources/StethoText_demo_samples/s1/nam/neilnam_IITM_2728.wav"></audio>
+                            <audio controls src="resources/StethoText_demo_samples/s1/nam/neilnam_IITM_399.wav"></audio>
                         </td>
                         <td class="text-center">
-                            <audio controls src="resources/StethoText_demo_samples/s1/groundtruth/neilnam_IITM_2728.wav"></audio>
+                            <audio controls src="resources/StethoText_demo_samples/s1/groundtruth/neilnam_IITM_399.wav"></audio>
                         </td>
                         <td class="text-center">
-                            <audio controls src="resources/StethoText_demo_samples/s1/ljvoice/neilnam_IITM_2728.wav"></audio>
+                            <audio controls src="resources/StethoText_demo_samples/s1/ljvoice/neilnam_IITM_399.wav"></audio>
                         </td>
                         <td class="text-center">
-                            <audio controls src="resources/StethoText_demo_samples/s1/indianmalevoice/neilnam_IITM_2728.wav"></audio>
+                            <audio controls src="resources/StethoText_demo_samples/s1/indianmalevoice/neilnam_IITM_399.wav"></audio>
                         </td>
-                    </tr>
+                    </tr>                 
                 </tbody>
             </table>
         </div>
@@ -599,84 +629,84 @@
                         <td class="text-center">
                             <audio controls src="resources/StethoText_demo_samples/noisyexp/noisyspeech/59.wav"></audio>
                         </td>
-                        <td>Good afternoon boys and girls.</td>
+                        <td>good afternoon boys and girls</td>
                         <td class="text-center">
                             <audio controls src="resources/StethoText_demo_samples/noisyexp/noisynam/nam59.wav"></audio>
                         </td>
                         <td class="text-center">
                             <audio controls src="resources/StethoText_demo_samples/noisyexp/noisynamstethospeechoutput/nam59.wav"></audio>
                         </td>
-                        <td>Please continue your journey.</td>
+                        <td>please continue your journey</td>
                     </tr>
                     <tr class="flex-row">
                         <td>My husband is one example.</td>
                         <td class="text-center">
                             <audio controls src="resources/StethoText_demo_samples/noisyexp/noisyspeech/68.wav"></audio>
                         </td>
-                        <td>Life of baby girl.</td>
+                        <td>life of baby girl</td>
                         <td class="text-center">
                             <audio controls src="resources/StethoText_demo_samples/noisyexp/noisynam/nam68.wav"></audio>
                         </td>
                         <td class="text-center">
                             <audio controls src="resources/StethoText_demo_samples/noisyexp/noisynamstethospeechoutput/nam68.wav"></audio>
                         </td>
-                        <td>My husband is one example.</td>
+                        <td>my husband is one example</td>
                     </tr>
                     <tr class="flex-row">
                         <td>This is no place for you.</td>
                         <td class="text-center">
                             <audio controls src="resources/StethoText_demo_samples/noisyexp/noisyspeech/47.wav"></audio>
                         </td>
-                        <td>I will give it a shot now.</td>
+                        <td>i will give it a shot now</td>
                         <td class="text-center">
                             <audio controls src="resources/StethoText_demo_samples/noisyexp/noisynam/nam47.wav"></audio>
                         </td>
                         <td class="text-center">
                             <audio controls src="resources/StethoText_demo_samples/noisyexp/noisynamstethospeechoutput/nam47.wav"></audio>
                         </td>
-                        <td>This is no place for you.</td>
+                        <td>this is no place for you</td>
                     </tr>
                     <tr class="flex-row">
                         <td>Thus speaks our religion.</td>
                         <td class="text-center">
                             <audio controls src="resources/StethoText_demo_samples/noisyexp/noisyspeech/16.wav"></audio>
                         </td>
-                        <td>That is a good idea.</td>
+                        <td>that is a good idea</td>
                         <td class="text-center">
                             <audio controls src="resources/StethoText_demo_samples/noisyexp/noisynam/nam16.wav"></audio>
                         </td>
                         <td class="text-center">
                             <audio controls src="resources/StethoText_demo_samples/noisyexp/noisynamstethospeechoutput/nam16.wav"></audio>
                         </td>
-                        <td>Thus speaks our religion.</td>
+                        <td>thus speaks our religion</td>
                     </tr>
                     <tr class="flex-row">
-                        <td>The child replied it rained heavily last night.</td>
+                        <td>On this they started looking at each other.</td>
                         <td class="text-center">
-                            <audio controls src="resources/StethoText_demo_samples/noisyexp/noisyspeech/15.wav"></audio>
+                            <audio controls src="resources/StethoText_demo_samples/noisyexp/noisyspeech/4.wav"></audio>
                         </td>
-                        <td>The sky is going slightly even if it is heavy rock like.</td>
+                        <td>i</td>
                         <td class="text-center">
-                            <audio controls src="resources/StethoText_demo_samples/noisyexp/noisynam/nam15.wav"></audio>
+                            <audio controls src="resources/StethoText_demo_samples/noisyexp/noisynam/nam4.wav"></audio>
                         </td>
                         <td class="text-center">
-                            <audio controls src="resources/StethoText_demo_samples/noisyexp/noisynamstethospeechoutput/nam15.wav"></audio>
+                            <audio controls src="resources/StethoText_demo_samples/noisyexp/noisynamstethospeechoutput/nam4.wav"></audio>
                         </td>
-                        <td>The child replied it rained heavily last night.</td>
+                        <td>on this they started looking at each other</td>
                     </tr>
                     <tr class="flex-row">
                         <td>But his problem remained.</td>
                         <td class="text-center">
                             <audio controls src="resources/StethoText_demo_samples/noisyexp/noisyspeech/37.wav"></audio>
                         </td>
-                        <td>But the good stuff can be made.</td>
+                        <td>but the good stuff can be made</td>
                         <td class="text-center">
                             <audio controls src="resources/StethoText_demo_samples/noisyexp/noisynam/nam37.wav"></audio>
                         </td>
                         <td class="text-center">
                             <audio controls src="resources/StethoText_demo_samples/noisyexp/noisynamstethospeechoutput/nam37.wav"></audio>
                         </td>
-                        <td>But his problem remained.</td>
+                        <td>but his problem remained</td>
                     </tr>
                 </tbody>
             </table>
