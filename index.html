@@ -607,6 +607,83 @@
 
         <div class="row p-7"></div>
         <div class="row">
+            <h3>StethoSpeech in a zero-shot setting</h3>
+        </div>
+        <div class="row d-flex table-responsive overflow-auto">
+            <table class="table table-bordered m-3">
+                <thead>
+                    <tr class="flex-row">
+                        <th class="col-2 text-center">Text</th>
+                        <th class="col-2 text-center">Unseen speaker</th>
+                        <th class="col-2 text-center">Input vibrations</th>
+                        <th class="col-1 text-center">Generated speech in voice 1</th>
+                        <th class="col-1 text-center">Generated speech in voice 2</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="flex-row">
+                        <td>Instead, I must be careful in finding out the source of this noise.</td>
+                        <td>s13</td>
+                        <td class="text-center">
+                            <audio controls src="resources/StethoText_demo_samples/generalizability/nam/s13_158.wav"></audio>
+                        </td>
+                        <td class="text-center">
+                            <audio controls src="resources/StethoText_demo_samples/generalizability/convertedspeech/femalevoice/s13_158.wav"></audio>
+                        </td>
+                        <td class="text-center">
+                            <audio controls src="resources/StethoText_demo_samples/generalizability/convertedspeech/malevoice/s13_158.wav"></audio>
+                        </td>
+                    </tr>
+
+                    <tr class="flex-row">
+                        <td>hit the ground and turn into gold.</td>
+                        <td>s12</td>
+                        <td class="text-center">
+                            <audio controls src="resources/StethoText_demo_samples/generalizability/nam/s12_386.wav"></audio>
+                        </td>
+                        <td class="text-center">
+                            <audio controls src="resources/StethoText_demo_samples/generalizability/convertedspeech/femalevoice/s12_386.wav"></audio>
+                        </td>
+                        <td class="text-center">
+                            <audio controls src="resources/StethoText_demo_samples/generalizability/convertedspeech/malevoice/s12_386.wav"></audio>
+                        </td>
+                    </tr>
+
+                    <tr class="flex-row">
+                        <td>it is too early to say.</td>
+                        <td>s1</td>
+                        <td class="text-center">
+                            <audio controls src="resources/StethoText_demo_samples/generalizability/nam/s01_neilnam_022.wav"></audio>
+                        </td>
+                        <td class="text-center">
+                            <audio controls src="resources/StethoText_demo_samples/generalizability/convertedspeech/femalevoice/s01_neilnam_022.wav"></audio>
+                        </td>
+                        <td class="text-center">
+                            <audio controls src="resources/StethoText_demo_samples/generalizability/convertedspeech/malevoice/s01_neilnam_022.wav"></audio>
+                        </td>
+                    </tr>
+
+                    <tr class="flex-row">
+                        <td>i was not to cry out in the face of fear.</td>
+                        <td>s11</td>
+                        <td class="text-center">
+                            <audio controls src="resources/StethoText_demo_samples/generalizability/nam/s11_307.wav"></audio>
+                        </td>
+                        <td class="text-center">
+                            <audio controls src="resources/StethoText_demo_samples/generalizability/convertedspeech/femalevoice/s11_307.wav"></audio>
+                        </td>
+                        <td class="text-center">
+                            <audio controls src="resources/StethoText_demo_samples/generalizability/convertedspeech/malevoice/s11_307.wav"></audio>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+
+        <div class="row p-8"></div>
+        <div class="row">
             <h3>Speech recognition on noisy speech versus generated speech from StethoSpeech with noisy vibrations as input. Both recorded in a similar environment</h3>
         </div>
         <div class="row d-flex table-responsive overflow-auto">
