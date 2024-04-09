@@ -68,13 +68,11 @@
 
     <div class="d-block p-3">
         <div class="row">
-            <h3>Comparing speech converted with existing methods and StethoSpeech on CSTR NAM TIMIT Plus corpus</h3>
+            <h3>Comparing speech converted with existing methods and StethoSpeech on CSTR NAM TIMIT Plus corpus. Please see that the samples of DiscoGAN and MSpec-Net are taken from their web-page</h3>
         </div>
 
         <div class="row d-flex table-responsive overflow-auto">
             <table class="table table-bordered m-3">
-                <!-- <h5 class="text-center fs-4">Comparing samples for cross-lingual speech synthesis</h5> -->
-                <!-- <caption class="text-center fs-4">Comparing samples for cross-lingual speech synthesis</caption> -->
                 <thead>
                     <tr class="flex-row">
                         <th class="col-2 text-center">Text</th>
@@ -123,6 +121,79 @@
                         </td>
                     </tr>
 
+                </tbody>
+            </table>
+        </div>
+
+        <div class="row">
+            <h3>For fair comparison we also show the DiscoGAN and MSpec-Net converted speech by re-implementing their code. The authors are yet to release their studio-recorded ground-truth, hence we train their method using our simulated ground-truth speech</h3>
+        </div>
+
+        <div class="row d-flex table-responsive overflow-auto">
+            <table class="table table-bordered m-3">
+                <thead>
+                    <tr class="flex-row">
+                        <th class="col-2 text-center">Dataset</th>
+                        <th class="col-1 text-center">Input NAM Vibrations</th>
+                        <th class="col-1 text-center">DiscoGAN</th>
+                        <th class="col-1 text-center">MSpec-Net</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="flex-row">
+                        <td>CSTR NAM TIMIT Plus.</td>
+                        <td class="text-center">
+                            <audio controls src="resources/Mspecnet_myimplementation/nam/001.wav"></audio>
+                        </td>
+                        <td class="text-center">
+                            <audio controls src="resources/Mspecnet_myimplementation/converted_wav_DiscoGAN/001.wav"></audio>
+                        </td>
+                        <td class="text-center">
+                            <audio controls src="resources/Mspecnet_myimplementation/converted_wav_CSTRNAM_MSpecNet/001.wav"></audio>
+                        </td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr class="flex-row">
+                        <td>CSTR NAM TIMIT Plus.</td>
+                        <td class="text-center">
+                            <audio controls src="resources/Mspecnet_myimplementation/nam/003.wav"></audio>
+                        </td>
+                        <td class="text-center">
+                            <audio controls src="resources/Mspecnet_myimplementation/converted_wav_DiscoGAN/003.wav"></audio>
+                        </td>
+                        <td class="text-center">
+                            <audio controls src="resources/Mspecnet_myimplementation/converted_wav_CSTRNAM_MSpecNet/003.wav"></audio>
+                        </td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr class="flex-row">
+                        <td>s1 (StethoText).</td>
+                        <td class="text-center">
+                            <audio controls src="resources/Mspecnet_myimplementation/nam/s01_neilljnam_36.wav"></audio>
+                        </td>
+                        <td class="text-center">
+                            <audio controls src="resources/Mspecnet_myimplementation/converted_wav_DiscoGAN/003.wav"></audio>
+                        </td>
+                        <td class="text-center">
+                            <audio controls src="resources/Mspecnet_myimplementation/converted_wav_neildata_MSpecNet/neilljnam_36.wav"></audio>
+                        </td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr class="flex-row">
+                        <td>s1 (StethoText).</td>
+                        <td class="text-center">
+                            <audio controls src="resources/Mspecnet_myimplementation/nam/s01_neilljnam_69.wav"></audio>
+                        </td>
+                        <td class="text-center">
+                            <audio controls src="resources/Mspecnet_myimplementation/converted_wav_DiscoGAN/003.wav"></audio>
+                        </td>
+                        <td class="text-center">
+                            <audio controls src="resources/Mspecnet_myimplementation/converted_wav_neildata_MSpecNet/neilljnam_69.wav"></audio>
+                        </td>
+                    </tr>
                 </tbody>
             </table>
         </div>
