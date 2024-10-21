@@ -6,38 +6,87 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#712cf9">
-    <title>Document</title>
+    <title>StethoSpeech: Speech Generation Through a Clinical Stethoscope Attached to the Skin</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 
     <style>
-        
-    </style>
+        body {
+            background-color: #f8f9fa;
+        }
 
+        .title-section {
+            background-color: #712cf9;
+            color: white;
+            padding: 40px 0;
+        }
+
+        .author-section {
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        .author-info p {
+            font-size: 1.1rem;
+            margin-bottom: 0;
+        }
+
+        .accepted-section {
+            margin: 40px 0;
+        }
+
+        .btn-primary {
+            font-size: 1.2rem;
+            padding: 10px 20px;
+        }
+    </style>
 </head>
 
-<body class="">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+<body>
 
-    <div class="d-block p-3">
-        <div class="row p-5">
-            <h1 class="display-3 text-lg-center">
-                StethoSpeech: Speech Generation Through Stethoscopic Microphone Attached To The Skin
-            </h1>
+    <div class="container-fluid">
+        <!-- Title Section -->
+        <div class="row title-section text-center">
+            <div class="col">
+                <h1 class="display-4">
+                    StethoSpeech: Speech Generation Through Stethoscopic Microphone Attached To The Skin
+                </h1>
+            </div>
         </div>
 
-        <div class="row justify-content-center">
-            <div class="col-lg-8 text-center">
-                <p class="lead">Neil Shah<sup>1,2</sup>, Neha Sahipjohn<sup>1</sup>, Vishal Tambrahalli<sup>1</sup>, Ramanathan Subramanian<sup>3</sup>, Vineet Gandhi<sup>1</sup></p>
+        <!-- Author Section -->
+        <div class="row justify-content-center author-section">
+            <div class="col-lg-8 text-center author-info">
+                <p class="lead">
+                    Neil Shah<sup>1,2</sup>, Neha Sahipjohn<sup>1</sup>, Vishal Tambrahalli<sup>1</sup>, 
+                    Ramanathan Subramanian<sup>3</sup>, Vineet Gandhi<sup>1</sup>
+                </p>
                 <p><sup>1</sup>International Institute of Information Technology, Hyderabad, India</p>
-                <p><sup>2</sup>Tata Consultancy Services, Pune, India</p>
+                <p><sup>2</sup>TCS Research, Pune, India</p>
                 <p><sup>3</sup>University of Canberra, Australia</p>
             </div>
-        </div>        
+        </div>  
 
-        <div class="row p-2">
-            <!-- YouTube video embed -->
+        <!-- Spacer -->
+        <div class="row p-2"></div>
+
+        <!-- Acceptance Section -->
+        <div class="row accepted-section">
+            <div class="col text-center">
+                <h3 style="font-size: 1.2rem;"> <!-- Adjust font size here -->
+                    <a href="https://dl.acm.org/doi/10.1145/3678515" target="_blank" class="text-decoration-none">
+                        Accepted to the Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies Vol. 8, No. 3
+                    </a>
+                </h3>
+            </div>
+        </div>
+
+
+        <!-- Video Section -->
+        <div class="row video-section">
             <div class="col-12 text-center">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/aG4DSJspDiA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/aG4DSJspDiA" 
+                    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen></iframe>
             </div>
         </div>
         
